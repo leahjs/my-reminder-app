@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Appointmentreminders</h1>
+
+<h1>Twilio phone reminder demo</h1>
+<h2 style="color: #ff0000"><%= params['msg'] %></h2>
+<h3>Enter your phone number to receive an automated reminder</h3>
+<form action="/appointmentreminder/makecall" method="post">
+    <input type="text" name="number" />
+    <input type="submit" value="Call me!">
+</form>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @appointmentreminders.each do |appointmentreminder| %>
+      <tr>
+        <td><%= link_to 'Show', appointmentreminder %></td>
+        <td><%= link_to 'Edit', edit_appointmentreminder_path(appointmentreminder) %></td>
+        <td><%= link_to 'Destroy', appointmentreminder, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br> -->
+
+<%= link_to 'New Appointmentreminder', new_appointmentreminder_path %>
